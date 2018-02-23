@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         v1 = (TextView) findViewById(R.id.v1);
-        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/jinqiaofanweibei.ttf");
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/huawenxinwei.ttf");
         v1.setTypeface(tf);
     }
 }
