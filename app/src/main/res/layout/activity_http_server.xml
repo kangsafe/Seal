@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sv"
     android:layout_width="match_parent"
-    android:padding="50dp"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.ks.seal.launcher.HttpServerActivity">
 
-    <com.ks.seal.launcher.view.TextViewVertical
-        android:id="@+id/tv"
+    <HorizontalScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="50dp">
+
+        <com.ks.seal.launcher.view.TextViewVertical
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/seal_bg_01" />
+
+
+    </HorizontalScrollView>
+
+    <com.ks.seal.launcher.view.DragFloatActionButton
+        android:id="@+id/vdrag"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/seal_bg_01"/>
-</HorizontalScrollView>
+        android:layout_height="wrap_content" />
+</LinearLayout>

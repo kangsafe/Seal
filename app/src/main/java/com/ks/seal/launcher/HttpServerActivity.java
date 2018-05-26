@@ -9,12 +9,17 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.HorizontalScrollView;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
+import com.ks.seal.launcher.view.DragFloatActionButton;
 import com.ks.seal.launcher.view.TextViewVertical;
 import com.tencent.assistant.link.sdk.AppLinkHelper;
 
-public class HttpServerActivity extends AppCompatActivity {
+public class HttpServerActivity extends AppCompatActivity implements View.OnClickListener {
     private HorizontalScrollView sv;
     private TextViewVertical tv;
 
@@ -72,6 +77,7 @@ public class HttpServerActivity extends AppCompatActivity {
                 "为了能更好的体验感受，我特意增加了比较接近书法的字体和颜色，如果有什么改进的建议请发邮件到我的邮箱吧。" +
                 "\n竖直排版的TextView需要配合HorizontalScrollView使用才能有更佳的效果。当然，如果你有时间的话，也可以给这个类" +
                 "加上滚动的功能。");
+        findViewById(R.id.vdrag).setOnClickListener(this);
     }
 
     private void getAppLink() {
@@ -92,6 +98,35 @@ public class HttpServerActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.vdrag:
+
+//                PopupMenu popupMenu=new PopupMenu(this,view);
+//                getMenuInflater().inflate(R.menu.pop_item,popupMenu.getMenu());
+//                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+//                    @Override
+//                    public boolean onMenuItemClick(MenuItem menuItem) {
+//                        switch (menuItem.getItemId()){
+//                            case R.id.action_last:
+//                                Toast.makeText(TestActivity.this,""+menuItem.getItemId(),Toast.LENGTH_SHORT).show();
+//                                break;
+//                            case R.id.action_next:
+//                                Toast.makeText(TestActivity.this,""+menuItem.getItemId(),Toast.LENGTH_SHORT).show();
+//                                break;
+//                        }
+//
+//                        return false;
+//                    }
+//                });
+//                popupMenu.show();
+                Log.e("****--->","float");
+                // Toast.makeText(this,"flaot---",Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 }
